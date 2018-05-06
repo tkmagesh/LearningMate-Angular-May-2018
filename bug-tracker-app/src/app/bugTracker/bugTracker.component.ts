@@ -12,7 +12,7 @@ export class BugTrackerComponent{
 
 	bugSortBy : string = 'name';
 	bugSortDescendingOrder : boolean = false;
-	
+
 	constructor(){
 		this.list.push({name : 'Server communication failure', isClosed : false});
 		this.list.push({name : 'Data integrity checks failed', isClosed : true});
@@ -24,22 +24,20 @@ export class BugTrackerComponent{
 			name : this.newBugName,
 			isClosed : false
 		};
-		this.list.push(newBug);
+		this.list = [...this.list, newBug];
 		this.newBugName = '';
 	}
 
-	onBugNameClick(bug){
-		bug.isClosed = !bug.isClosed;
+	onBugNameClick(bugToToggle){
+		let toggledBug = { ...bugToToggle, isClosed : !bugToToggle.isClosed};
+		this.list = this.list.map(bug => bug === bugToToggle ? toggledBug : bug);
 	}
 
 	onRemoveClosedClick(){
 		this.list = this.list.filter(bug => !bug.isClosed);
 	}
 
-	getClosedCount(){
-		return this.list.reduce((prevResult, bug) => bug.isClosed ? ++prevResult : prevResult, 0);
-	}
-
+	
 	
 }
 
