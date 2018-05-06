@@ -10,8 +10,14 @@ export class BugTrackerComponent{
 	list : Bug[] = [];
 	newBugName : string = '';
 
+	bugSortBy : string = 'name';
+	bugSortDescendingOrder : boolean = false;
+	
 	constructor(){
-		
+		this.list.push({name : 'Server communication failure', isClosed : false});
+		this.list.push({name : 'Data integrity checks failed', isClosed : true});
+		this.list.push({name : 'User actions not recognized', isClosed : true});
+		this.list.push({name : 'Application not responding', isClosed : false});
 	}
 	onCreateNewClick(){
 		let newBug : Bug = {
@@ -34,10 +40,7 @@ export class BugTrackerComponent{
 		return this.list.reduce((prevResult, bug) => bug.isClosed ? ++prevResult : prevResult, 0);
 	}
 
-	getFormattedBugName(bugName : string){
-		console.log('getFormattedBugName triggered');
-		return bugName.length < 30 ? bugName : bugName.substr(0,30) + '...';
-	}	
+	
 }
 
 
