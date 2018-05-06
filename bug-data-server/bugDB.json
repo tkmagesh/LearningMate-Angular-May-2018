@@ -1,13 +1,6 @@
 {
   "bugs": [
     {
-      "id": 1,
-      "name": "Application not responding",
-      "isClosed": false,
-      "createdAt": "2018-04-13T05:04:49.872Z",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
       "id": 2,
       "name": "Routing is not routing",
       "isClosed": false,
@@ -20,6 +13,12 @@
       "isClosed": false,
       "createdAt": "2018-04-20T11:13:10.511Z",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, eius, possimus. Ipsam facere laboriosam nesciunt consectetur eius, soluta fuga rerum ex quidem inventore esse corrupti explicabo blanditiis, quasi, voluptatum consequuntur!"
+    },
+    {
+      "id": 4,
+      "name": "Observable is not observing",
+      "isClosed": true,
+      "createdAt": "2018-05-06T11:45:54.743Z"
     }
   ],
   "projects": [

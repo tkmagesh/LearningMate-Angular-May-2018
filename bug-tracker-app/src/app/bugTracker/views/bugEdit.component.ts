@@ -21,10 +21,19 @@ export class BugEditComponent{
 	constructor(private bugOperations : BugOperationsService){
 
 	}
-	onCreateNewClick(){
+	//Sync
+	/*onCreateNewClick(){
 		let newBug : Bug = this.bugOperations.createNew(this.newBugName);
 		this.newBugName = '';
 		this.bugCreated.emit(newBug);
+	}*/
+
+	onCreateNewClick(){
+		this.bugOperations
+			.createNew(this.newBugName)
+			.subscribe(newBug => this.bugCreated.emit(newBug));
+		this.newBugName = '';
+		
 	}
 }
 
